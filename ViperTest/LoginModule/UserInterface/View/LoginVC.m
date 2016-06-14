@@ -24,12 +24,7 @@
 {
     [super viewDidLoad];
     [self addDismissingKeyboardbyTouch];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [self.navigationController.navigationBar setHidden:YES];
+    [self hideNavigationBar];
 }
 
 #pragma mark - Actions
@@ -51,7 +46,7 @@
 
 - (void)updateViewWithSuccessLogin
 {
-     NSLog(@"You are successed logged in!");
+     [self displayAlertWithErrorMessage:@"You are successed logged in!\n😇"];
 }
 
 - (void)updateViewWithErrorMessage:(NSString *)errorMessage

@@ -21,6 +21,12 @@
 		1A619E3E1D101A3F009F8EA9 /* UIStoryboard+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A619E3D1D101A3F009F8EA9 /* UIStoryboard+Category.m */; };
 		1A619E431D102255009F8EA9 /* NSError+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A619E421D102255009F8EA9 /* NSError+Category.m */; };
 		1A619E471D1024D8009F8EA9 /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A619E461D1024D8009F8EA9 /* UIViewController+Category.m */; };
+		1A619E531D1031D7009F8EA9 /* RegistrationDomainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A619E521D1031D7009F8EA9 /* RegistrationDomainModel.m */; };
+		1A619E561D1031EA009F8EA9 /* RegistrationInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A619E551D1031EA009F8EA9 /* RegistrationInteractor.m */; };
+		1A619E591D10330B009F8EA9 /* RegistrationPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A619E581D10330B009F8EA9 /* RegistrationPresenter.m */; };
+		1A619E5C1D103324009F8EA9 /* RegistrationWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A619E5B1D103324009F8EA9 /* RegistrationWireframe.m */; };
+		1A619E5F1D10335E009F8EA9 /* RegistrationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A619E5E1D10335E009F8EA9 /* RegistrationView.m */; };
+		1A619E621D103370009F8EA9 /* RegistrationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A619E611D103370009F8EA9 /* RegistrationVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +58,21 @@
 		1A619E421D102255009F8EA9 /* NSError+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Category.m"; sourceTree = "<group>"; };
 		1A619E451D1024D8009F8EA9 /* UIViewController+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Category.h"; sourceTree = "<group>"; };
 		1A619E461D1024D8009F8EA9 /* UIViewController+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Category.m"; sourceTree = "<group>"; };
+		1A619E511D1031D7009F8EA9 /* RegistrationDomainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationDomainModel.h; sourceTree = "<group>"; };
+		1A619E521D1031D7009F8EA9 /* RegistrationDomainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationDomainModel.m; sourceTree = "<group>"; };
+		1A619E541D1031EA009F8EA9 /* RegistrationInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationInteractor.h; sourceTree = "<group>"; };
+		1A619E551D1031EA009F8EA9 /* RegistrationInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationInteractor.m; sourceTree = "<group>"; };
+		1A619E571D10330B009F8EA9 /* RegistrationPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationPresenter.h; sourceTree = "<group>"; };
+		1A619E581D10330B009F8EA9 /* RegistrationPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationPresenter.m; sourceTree = "<group>"; };
+		1A619E5A1D103324009F8EA9 /* RegistrationWireframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationWireframe.h; sourceTree = "<group>"; };
+		1A619E5B1D103324009F8EA9 /* RegistrationWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationWireframe.m; sourceTree = "<group>"; };
+		1A619E5D1D10335E009F8EA9 /* RegistrationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationView.h; sourceTree = "<group>"; };
+		1A619E5E1D10335E009F8EA9 /* RegistrationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationView.m; sourceTree = "<group>"; };
+		1A619E601D103370009F8EA9 /* RegistrationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationVC.h; sourceTree = "<group>"; };
+		1A619E611D103370009F8EA9 /* RegistrationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationVC.m; sourceTree = "<group>"; };
+		1A619E671D103E91009F8EA9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		1A619E681D105227009F8EA9 /* RegistrationIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationIO.h; sourceTree = "<group>"; };
+		1A619E691D105237009F8EA9 /* RegistrationViewIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewIO.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +112,10 @@
 				1A619E0B1D0EC135009F8EA9 /* LaunchScreen.storyboard */,
 				1A619E341D10198D009F8EA9 /* Library */,
 				1A619E141D0EC2B4009F8EA9 /* LoginModule */,
+				1A619E481D1031AA009F8EA9 /* RegistrationModule */,
 				1A619E391D1019FC009F8EA9 /* Resources */,
 				1A619DFD1D0EC135009F8EA9 /* Supporting Files */,
+				1A619E671D103E91009F8EA9 /* PrefixHeader.pch */,
 			);
 			path = ViperTest;
 			sourceTree = "<group>";
@@ -243,6 +266,91 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
+		1A619E481D1031AA009F8EA9 /* RegistrationModule */ = {
+			isa = PBXGroup;
+			children = (
+				1A619E491D1031AA009F8EA9 /* ApplicationLogic */,
+				1A619E4C1D1031AA009F8EA9 /* ModuleInterface */,
+				1A619E4D1D1031AA009F8EA9 /* UserInterface */,
+			);
+			path = RegistrationModule;
+			sourceTree = "<group>";
+		};
+		1A619E491D1031AA009F8EA9 /* ApplicationLogic */ = {
+			isa = PBXGroup;
+			children = (
+				1A619E4A1D1031AA009F8EA9 /* Interactor */,
+				1A619E4B1D1031AA009F8EA9 /* Model */,
+			);
+			path = ApplicationLogic;
+			sourceTree = "<group>";
+		};
+		1A619E4A1D1031AA009F8EA9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1A619E541D1031EA009F8EA9 /* RegistrationInteractor.h */,
+				1A619E551D1031EA009F8EA9 /* RegistrationInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1A619E4B1D1031AA009F8EA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A619E511D1031D7009F8EA9 /* RegistrationDomainModel.h */,
+				1A619E521D1031D7009F8EA9 /* RegistrationDomainModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A619E4C1D1031AA009F8EA9 /* ModuleInterface */ = {
+			isa = PBXGroup;
+			children = (
+				1A619E681D105227009F8EA9 /* RegistrationIO.h */,
+				1A619E691D105237009F8EA9 /* RegistrationViewIO.h */,
+			);
+			path = ModuleInterface;
+			sourceTree = "<group>";
+		};
+		1A619E4D1D1031AA009F8EA9 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				1A619E4E1D1031AA009F8EA9 /* Presenter */,
+				1A619E4F1D1031AA009F8EA9 /* View */,
+				1A619E501D1031AA009F8EA9 /* Wireframe */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		1A619E4E1D1031AA009F8EA9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1A619E571D10330B009F8EA9 /* RegistrationPresenter.h */,
+				1A619E581D10330B009F8EA9 /* RegistrationPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1A619E4F1D1031AA009F8EA9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A619E601D103370009F8EA9 /* RegistrationVC.h */,
+				1A619E611D103370009F8EA9 /* RegistrationVC.m */,
+				1A619E5D1D10335E009F8EA9 /* RegistrationView.h */,
+				1A619E5E1D10335E009F8EA9 /* RegistrationView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1A619E501D1031AA009F8EA9 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				1A619E5A1D103324009F8EA9 /* RegistrationWireframe.h */,
+				1A619E5B1D103324009F8EA9 /* RegistrationWireframe.m */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -313,15 +421,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A619E531D1031D7009F8EA9 /* RegistrationDomainModel.m in Sources */,
 				1A619E3E1D101A3F009F8EA9 /* UIStoryboard+Category.m in Sources */,
 				1A619E431D102255009F8EA9 /* NSError+Category.m in Sources */,
+				1A619E5F1D10335E009F8EA9 /* RegistrationView.m in Sources */,
+				1A619E621D103370009F8EA9 /* RegistrationVC.m in Sources */,
+				1A619E591D10330B009F8EA9 /* RegistrationPresenter.m in Sources */,
 				1A619E221D0EC2EF009F8EA9 /* LoginInteractor.m in Sources */,
 				1A619E021D0EC135009F8EA9 /* AppDelegate.m in Sources */,
 				1A619E2B1D0EC3F0009F8EA9 /* LoginView.m in Sources */,
+				1A619E561D1031EA009F8EA9 /* RegistrationInteractor.m in Sources */,
 				1A619E471D1024D8009F8EA9 /* UIViewController+Category.m in Sources */,
 				1A619E281D0EC31A009F8EA9 /* LoginVC.m in Sources */,
 				1A619E251D0EC300009F8EA9 /* LoginPresenter.m in Sources */,
 				1A619DFF1D0EC135009F8EA9 /* main.m in Sources */,
+				1A619E5C1D103324009F8EA9 /* RegistrationWireframe.m in Sources */,
 				1A619E2E1D0EC40A009F8EA9 /* LoginWireframe.m in Sources */,
 				1A619E1F1D0EC2D5009F8EA9 /* LoginModel.m in Sources */,
 			);
@@ -429,6 +543,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ViperTest/PrefixHeader.pch;
 				INFOPLIST_FILE = ViperTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VINT.ViperTest;
@@ -440,6 +556,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ViperTest/PrefixHeader.pch;
 				INFOPLIST_FILE = ViperTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VINT.ViperTest;

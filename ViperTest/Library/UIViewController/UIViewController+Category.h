@@ -11,6 +11,7 @@
 @interface UIViewController (Category)
 
 - (void)displayAlertWithErrorMessage:(NSString *)errorMessage;
+- (void)hideNavigationBar;
 - (void)addDismissingKeyboardbyTouch;
 
 @end

@@ -14,5 +14,9 @@
 
 @implementation LoginView
 
+- (void)awakeFromNib
+{
+    self.copyrightLabel.text = COPYRIGHT_TEXT;
+}
 
 @end

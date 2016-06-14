@@ -23,6 +23,11 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
+- (void)hideNavigationBar
+{
+    [self.navigationController.navigationBar setHidden:YES];
+}
+
 - (void)addDismissingKeyboardbyTouch
 {
     UITapGestureRecognizer *touch = [[UITapGestureRecognizer alloc]
