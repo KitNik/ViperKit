@@ -19,5 +19,6 @@
 @protocol LoginOutput <NSObject>
 
 - (void)loggedSuccess;
+- (void)loggedFailureWithErrorMessage:(NSString *)errorMessage;
 
 @end

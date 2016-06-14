@@ -10,12 +10,13 @@
 #import "LoginVC.h"
 #import "LoginPresenter.h"
 #import "LoginInteractor.h"
+#import "UIStoryboard+Category.h"
 
 @implementation LoginWireframe
 
 - (void)presentLoginViewControllerFromNavigationController:(UINavigationController *)navController
 {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Authorization" bundle:nil];
+    UIStoryboard *storyboard = [UIStoryboard authorizationStoryboard];
     
     LoginVC *loginVC = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([LoginVC class])];
     LoginPresenter *presenter = [[LoginPresenter alloc] init];

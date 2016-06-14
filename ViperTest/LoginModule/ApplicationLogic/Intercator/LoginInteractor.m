@@ -8,6 +8,7 @@
 
 #import "LoginInteractor.h"
 #import "LoginModel.h"
+#import "NSError+Category.h"
 
 @implementation LoginInteractor
 
@@ -16,6 +17,12 @@
     if ([self isLoginDataValid:loginModel]) {
         if ([self.presenter respondsToSelector:@selector(loggedSuccess)]) {
             [self.presenter loggedSuccess];
+        }
+    } else {
+        
+        NSError *error = [NSError generate];
+        if ([self.presenter respondsToSelector:@selector(loggedFailureWithErrorMessage:)]) {
+            [self.presenter loggedFailureWithErrorMessage:error.localizedDescription];
         }
     }
 }

@@ -17,7 +17,10 @@
 		1A619E281D0EC31A009F8EA9 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A619E271D0EC31A009F8EA9 /* LoginVC.m */; };
 		1A619E2B1D0EC3F0009F8EA9 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A619E2A1D0EC3F0009F8EA9 /* LoginView.m */; };
 		1A619E2E1D0EC40A009F8EA9 /* LoginWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A619E2D1D0EC40A009F8EA9 /* LoginWireframe.m */; };
-		1A619E331D0EFC3C009F8EA9 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A619E321D0EFC3C009F8EA9 /* Authorization.storyboard */; };
+		1A619E3B1D101A20009F8EA9 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A619E3A1D101A20009F8EA9 /* Authorization.storyboard */; };
+		1A619E3E1D101A3F009F8EA9 /* UIStoryboard+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A619E3D1D101A3F009F8EA9 /* UIStoryboard+Category.m */; };
+		1A619E431D102255009F8EA9 /* NSError+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A619E421D102255009F8EA9 /* NSError+Category.m */; };
+		1A619E471D1024D8009F8EA9 /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A619E461D1024D8009F8EA9 /* UIViewController+Category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +44,14 @@
 		1A619E2C1D0EC40A009F8EA9 /* LoginWireframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginWireframe.h; sourceTree = "<group>"; };
 		1A619E2D1D0EC40A009F8EA9 /* LoginWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = LoginWireframe.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		1A619E2F1D0EC4BD009F8EA9 /* LoginIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginIO.h; sourceTree = "<group>"; };
-		1A619E321D0EFC3C009F8EA9 /* Authorization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
+		1A619E3A1D101A20009F8EA9 /* Authorization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
+		1A619E3C1D101A3F009F8EA9 /* UIStoryboard+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Category.h"; sourceTree = "<group>"; };
+		1A619E3D1D101A3F009F8EA9 /* UIStoryboard+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Category.m"; sourceTree = "<group>"; };
+		1A619E3F1D102054009F8EA9 /* LoginViewIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewIO.h; sourceTree = "<group>"; };
+		1A619E411D102255009F8EA9 /* NSError+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Category.h"; sourceTree = "<group>"; };
+		1A619E421D102255009F8EA9 /* NSError+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Category.m"; sourceTree = "<group>"; };
+		1A619E451D1024D8009F8EA9 /* UIViewController+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Category.h"; sourceTree = "<group>"; };
+		1A619E461D1024D8009F8EA9 /* UIViewController+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Category.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,14 +84,15 @@
 		1A619DFC1D0EC135009F8EA9 /* ViperTest */ = {
 			isa = PBXGroup;
 			children = (
-				1A619E141D0EC2B4009F8EA9 /* LoginModule */,
 				1A619E001D0EC135009F8EA9 /* AppDelegate.h */,
 				1A619E011D0EC135009F8EA9 /* AppDelegate.m */,
 				1A619E091D0EC135009F8EA9 /* Assets.xcassets */,
-				1A619E0B1D0EC135009F8EA9 /* LaunchScreen.storyboard */,
 				1A619E0E1D0EC135009F8EA9 /* Info.plist */,
+				1A619E0B1D0EC135009F8EA9 /* LaunchScreen.storyboard */,
+				1A619E341D10198D009F8EA9 /* Library */,
+				1A619E141D0EC2B4009F8EA9 /* LoginModule */,
+				1A619E391D1019FC009F8EA9 /* Resources */,
 				1A619DFD1D0EC135009F8EA9 /* Supporting Files */,
-				1A619E321D0EFC3C009F8EA9 /* Authorization.storyboard */,
 			);
 			path = ViperTest;
 			sourceTree = "<group>";
@@ -135,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				1A619E2F1D0EC4BD009F8EA9 /* LoginIO.h */,
+				1A619E3F1D102054009F8EA9 /* LoginViewIO.h */,
 			);
 			path = ModuleInterface;
 			sourceTree = "<group>";
@@ -176,6 +188,59 @@
 				1A619E2D1D0EC40A009F8EA9 /* LoginWireframe.m */,
 			);
 			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		1A619E341D10198D009F8EA9 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				1A619E401D102235009F8EA9 /* NSError */,
+				1A619E351D10198D009F8EA9 /* NSString */,
+				1A619E361D10198D009F8EA9 /* Storyboard */,
+				1A619E441D1024C1009F8EA9 /* UIViewController */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		1A619E351D10198D009F8EA9 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		1A619E361D10198D009F8EA9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1A619E3C1D101A3F009F8EA9 /* UIStoryboard+Category.h */,
+				1A619E3D1D101A3F009F8EA9 /* UIStoryboard+Category.m */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		1A619E391D1019FC009F8EA9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1A619E3A1D101A20009F8EA9 /* Authorization.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1A619E401D102235009F8EA9 /* NSError */ = {
+			isa = PBXGroup;
+			children = (
+				1A619E411D102255009F8EA9 /* NSError+Category.h */,
+				1A619E421D102255009F8EA9 /* NSError+Category.m */,
+			);
+			path = NSError;
+			sourceTree = "<group>";
+		};
+		1A619E441D1024C1009F8EA9 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A619E451D1024D8009F8EA9 /* UIViewController+Category.h */,
+				1A619E461D1024D8009F8EA9 /* UIViewController+Category.m */,
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,7 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A619E331D0EFC3C009F8EA9 /* Authorization.storyboard in Resources */,
+				1A619E3B1D101A20009F8EA9 /* Authorization.storyboard in Resources */,
 				1A619E0D1D0EC135009F8EA9 /* LaunchScreen.storyboard in Resources */,
 				1A619E0A1D0EC135009F8EA9 /* Assets.xcassets in Resources */,
 			);
@@ -248,9 +313,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A619E3E1D101A3F009F8EA9 /* UIStoryboard+Category.m in Sources */,
+				1A619E431D102255009F8EA9 /* NSError+Category.m in Sources */,
 				1A619E221D0EC2EF009F8EA9 /* LoginInteractor.m in Sources */,
 				1A619E021D0EC135009F8EA9 /* AppDelegate.m in Sources */,
 				1A619E2B1D0EC3F0009F8EA9 /* LoginView.m in Sources */,
+				1A619E471D1024D8009F8EA9 /* UIViewController+Category.m in Sources */,
 				1A619E281D0EC31A009F8EA9 /* LoginVC.m in Sources */,
 				1A619E251D0EC300009F8EA9 /* LoginPresenter.m in Sources */,
 				1A619DFF1D0EC135009F8EA9 /* main.m in Sources */,
@@ -398,6 +466,7 @@
 				1A619E131D0EC135009F8EA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

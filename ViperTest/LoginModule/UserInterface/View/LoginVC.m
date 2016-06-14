@@ -10,6 +10,7 @@
 #import "LoginView.h"
 #import "LoginPresenter.h"
 #import "LoginModel.h"
+#import "UIViewController+Category.h"
 
 @interface LoginVC () <UITextFieldDelegate>
 
@@ -19,9 +20,10 @@
 
 @implementation LoginVC
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    
+    [self addDismissingKeyboardbyTouch];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -34,22 +36,27 @@
 
 - (IBAction)loginButtonTapped:(UIButton *)sender
 {
-    if ([self.presenter respondsToSelector:@selector(loginWithData:)]) {
+    if ([self.presenter respondsToSelector:@selector(loginButtonTappedWithData:)]) {
         
         LoginModel *loginModel = [[LoginModel alloc] init];
         
         loginModel.email = self.contentView.emailTextField.text;
         loginModel.password = self.contentView.passwordTextField.text;
         
-        [self.presenter loginWithData:loginModel];
+        [self.presenter loginButtonTappedWithData:loginModel];
     }
 }
 
-#pragma mark - Loginoutput delegate
+#pragma mark - LoginViewOutput Delegate
 
-- (void)loggedSuccess
+- (void)updateViewWithSuccessLogin
 {
-    NSLog(@"You are successed logged in!");
+     NSLog(@"You are successed logged in!");
+}
+
+- (void)updateViewWithErrorMessage:(NSString *)errorMessage
+{
+    [self displayAlertWithErrorMessage:errorMessage];
 }
 
 @end

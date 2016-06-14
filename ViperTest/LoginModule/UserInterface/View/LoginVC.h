@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LoginIO.h"
+#import "LoginViewIO.h"
 
 @class LoginPresenter;
 
-@interface LoginVC : UIViewController <LoginOutput>
+@interface LoginVC : UIViewController <LoginViewOutput>
 
-@property (nonatomic, strong) id <LoginInput> presenter;
+@property (nonatomic, strong) id <LoginViewInput> presenter;
 
 @end
