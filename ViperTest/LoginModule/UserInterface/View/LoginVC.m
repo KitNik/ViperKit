@@ -16,7 +16,6 @@
 @interface LoginVC () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet LoginView *contentView;
-@property (strong, nonatomic) RegistrationWireframe *registrationWireFrame;
 
 @end
 
@@ -27,6 +26,14 @@
     [super viewDidLoad];
     [self addDismissingKeyboardbyTouch];
     [self hideNavigationBar];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if ([self.presenter respondsToSelector:@selector(loginViewWillAppear)]) {
+        [self.presenter loginViewWillAppear];
+    }
 }
 
 #pragma mark - Actions
@@ -46,8 +53,9 @@
 
 - (IBAction)signUpButtonTapped:(UIButton *)sender
 {
-    self.registrationWireFrame = [[RegistrationWireframe alloc] init];
-    [self.registrationWireFrame presentRegistrationViewControllerFromNavigationController:self.navigationController];
+    if ([self.presenter respondsToSelector:@selector(signUpButtonTapped)]) {
+        [self.presenter signUpButtonTapped];
+    }
 }
 
 #pragma mark - LoginViewOutput Delegate

@@ -12,10 +12,12 @@
 #import "LoginInteractor.h"
 #import "LoginIO.h"
 #import "LoginViewIO.h"
+#import "LoginWireframeIO.h"
 
 @interface LoginPresenter : NSObject <LoginOutput, LoginViewInput>
 
 @property (nonatomic, weak) id <LoginInput> interactor;
 @property (nonatomic, weak) id <LoginViewOutput> viewContrtoller;
+@property (nonatomic, weak) id <LoginWireframeOutput> wireframe;
 
 @end

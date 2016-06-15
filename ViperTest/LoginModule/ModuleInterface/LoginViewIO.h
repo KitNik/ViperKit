@@ -13,6 +13,8 @@
 @protocol LoginViewInput <NSObject>
 
 - (void)loginButtonTappedWithData:(LoginModel *)loginModel;
+- (void)signUpButtonTapped;
+- (void)loginViewWillAppear;
 
 @end
 

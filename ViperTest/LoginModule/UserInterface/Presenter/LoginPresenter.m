@@ -20,6 +20,20 @@
     }
 }
 
+- (void)signUpButtonTapped
+{
+    if ([self.wireframe respondsToSelector:@selector(displayRegistrationScreen)]) {
+        [self.wireframe displayRegistrationScreen];
+    }
+}
+
+- (void)loginViewWillAppear
+{
+    if ([self.wireframe respondsToSelector:@selector(loginScreenWillAppear)]) {
+        [self.wireframe loginScreenWillAppear];
+    }
+}
+
 #pragma mark - LoginOutput Delegate
 
 - (void)loggedSuccess

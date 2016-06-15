@@ -13,6 +13,7 @@
 @protocol RegistrationViewInput <NSObject>
 
 - (void)signUpButtonTappedWithData:(RegistrationDomainModel *)registrationDomainModel;
+- (void)backToLoginButtonTapped;
 
 @end
 

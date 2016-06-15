@@ -73,6 +73,8 @@
 		1A619E671D103E91009F8EA9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		1A619E681D105227009F8EA9 /* RegistrationIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationIO.h; sourceTree = "<group>"; };
 		1A619E691D105237009F8EA9 /* RegistrationViewIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewIO.h; sourceTree = "<group>"; };
+		1A619E6A1D117E1F009F8EA9 /* LoginWireframeIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginWireframeIO.h; sourceTree = "<group>"; };
+		1A619E6B1D11830D009F8EA9 /* RegistrationWireframeIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationWireframeIO.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			children = (
 				1A619E2F1D0EC4BD009F8EA9 /* LoginIO.h */,
 				1A619E3F1D102054009F8EA9 /* LoginViewIO.h */,
+				1A619E6A1D117E1F009F8EA9 /* LoginWireframeIO.h */,
 			);
 			path = ModuleInterface;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			children = (
 				1A619E681D105227009F8EA9 /* RegistrationIO.h */,
 				1A619E691D105237009F8EA9 /* RegistrationViewIO.h */,
+				1A619E6B1D11830D009F8EA9 /* RegistrationWireframeIO.h */,
 			);
 			path = ModuleInterface;
 			sourceTree = "<group>";

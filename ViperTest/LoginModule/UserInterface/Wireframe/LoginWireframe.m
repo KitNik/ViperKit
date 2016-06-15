@@ -11,12 +11,15 @@
 #import "LoginPresenter.h"
 #import "LoginInteractor.h"
 #import "UIStoryboard+Category.h"
+#import "RegistrationWireframe.h"
 
 @interface LoginWireframe ()
 
 @property (nonatomic, strong) LoginVC *loginVC;
 @property (nonatomic, strong) LoginPresenter *presenter;
 @property (nonatomic, strong) LoginInteractor *interactor;
+
+@property (nonatomic, strong) RegistrationWireframe *registrationWireframe;
 
 @end
 
@@ -32,6 +35,7 @@
     
     self.presenter.viewContrtoller = self.loginVC;
     self.presenter.interactor = self.interactor;
+    self.presenter.wireframe = self;
     
     self.loginVC.presenter = self.presenter;
     self.interactor.presenter = self.presenter;
@@ -47,6 +51,23 @@
     [window makeKeyAndVisible];
     
     [self presentLoginViewControllerFromNavigationController:navController];
+}
+
+#pragma mark - LoginWireframeIO Delegate
+
+- (void)displayRegistrationScreen
+{
+    UINavigationController *navController = self.loginVC.navigationController;
+    
+    self.registrationWireframe = [[RegistrationWireframe alloc] init];
+    [self.registrationWireframe presentRegistrationViewControllerFromNavigationController:navController];
+}
+
+- (void)loginScreenWillAppear
+{
+    if (self.registrationWireframe) {
+        self.registrationWireframe = nil;
+    }
 }
 
 @end

@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "RegistrationWireframeIO.h"
 
-@interface RegistrationWireframe : NSObject
+@interface RegistrationWireframe : NSObject <RegistrationWireframeOutput>
 
 - (void)presentRegistrationViewControllerFromNavigationController:(UINavigationController *)navController;
 

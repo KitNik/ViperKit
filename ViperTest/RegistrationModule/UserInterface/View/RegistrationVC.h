@@ -11,6 +11,6 @@
 
 @interface RegistrationVC : UIViewController <RegistrationViewOutput>
 
-@property (nonatomic, strong) id <RegistrationViewInput> presenter;
+@property (nonatomic, weak) id <RegistrationViewInput> presenter;
 
 @end

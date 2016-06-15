@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "LoginWireframeIO.h"
 
-@interface LoginWireframe : NSObject
+@interface LoginWireframe : NSObject <LoginWireframeOutput>
 
 - (void)presentLoginViewControllerFromNavigationController:(UINavigationController *)navController;
 - (void)presentLoginViewControllerFromWindow:(UIWindow *)window;

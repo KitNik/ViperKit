@@ -35,8 +35,17 @@
     
     self.presenter.viewController = self.registrationVC;
     self.presenter.interractor = self.interactor;
+    self.presenter.wireframe = self;
     
     [navController pushViewController:self.registrationVC animated:YES];
+}
+
+#pragma mark - RegistrationWireframeOutput Delegate
+
+- (void)backToLoginScreen
+{
+    UINavigationController *navViewcontroller = self.registrationVC.navigationController;
+    [navViewcontroller popViewControllerAnimated:YES];
 }
 
 @end

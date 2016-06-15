@@ -13,7 +13,7 @@
 
 @interface RegistrationVC ()
 
-@property (strong, nonatomic) IBOutlet RegistrationView *contentView;
+@property (weak, nonatomic) IBOutlet RegistrationView *contentView;
 
 @end
 
@@ -39,12 +39,13 @@
         RegistrationDomainModel *registrationModel = [self registrationDomainModelFromRegistrationView:self.contentView];
         [self.presenter signUpButtonTappedWithData:registrationModel];
     }
-    
 }
 
 - (IBAction)backToLogInButtonTapped:(UIButton *)sender
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    if ([self.presenter respondsToSelector:@selector(backToLoginButtonTapped)]) {
+        [self.presenter backToLoginButtonTapped];
+    }
 }
 
 #pragma mark - RegistrationViewOutput Delegate

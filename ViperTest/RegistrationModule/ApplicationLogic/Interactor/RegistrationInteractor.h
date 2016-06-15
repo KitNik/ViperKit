@@ -11,6 +11,6 @@
 
 @interface RegistrationInteractor : NSObject <RegistrationInput>
 
-@property (nonatomic, strong) id <RegistrationOutput> presenter;
+@property (nonatomic, weak) id <RegistrationOutput> presenter;
 
 @end

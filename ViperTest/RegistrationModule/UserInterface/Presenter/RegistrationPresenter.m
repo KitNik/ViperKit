@@ -20,6 +20,13 @@
     }
 }
 
+- (void)backToLoginButtonTapped
+{
+    if ([self.wireframe respondsToSelector:@selector(backToLoginScreen)]) {
+        [self.wireframe backToLoginScreen];
+    }
+}
+
 #pragma mark - RegistrationOutput Delegate
 
 - (void)signUpSuccess

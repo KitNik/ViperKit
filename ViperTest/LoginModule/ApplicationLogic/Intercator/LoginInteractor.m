@@ -12,6 +12,8 @@
 
 @implementation LoginInteractor
 
+#pragma mark - LoginInput Delegate
+
 - (void)loginWithData:(LoginModel *)loginModel
 {
     if ([self isLoginDataValid:loginModel]) {
@@ -26,6 +28,8 @@
         }
     }
 }
+
+#pragma mark - Help methods
 
 - (BOOL)isLoginDataValid:(LoginModel *)loginModel
 {
