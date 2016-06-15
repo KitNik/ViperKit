@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "RegistrationViewIO.h"
 
-@interface RegistrationVC : UIViewController
+@interface RegistrationVC : UIViewController <RegistrationViewOutput>
 
-@property (nonatomic, strong) id <Regi>
+@property (nonatomic, strong) id <RegistrationViewInput> presenter;
 
 @end

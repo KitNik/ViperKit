@@ -11,10 +11,12 @@
 #import "LoginPresenter.h"
 #import "LoginModel.h"
 #import "UIViewController+Category.h"
+#import "RegistrationWireframe.h"
 
 @interface LoginVC () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet LoginView *contentView;
+@property (strong, nonatomic) RegistrationWireframe *registrationWireFrame;
 
 @end
 
@@ -42,11 +44,17 @@
     }
 }
 
+- (IBAction)signUpButtonTapped:(UIButton *)sender
+{
+    self.registrationWireFrame = [[RegistrationWireframe alloc] init];
+    [self.registrationWireFrame presentRegistrationViewControllerFromNavigationController:self.navigationController];
+}
+
 #pragma mark - LoginViewOutput Delegate
 
 - (void)updateViewWithSuccessLogin
 {
-     [self displayAlertWithErrorMessage:@"You are successed logged in!\n😇"];
+     [self displayAlertWithErrorMessage:@"You are success logged in!\n😇"];
 }
 
 - (void)updateViewWithErrorMessage:(NSString *)errorMessage

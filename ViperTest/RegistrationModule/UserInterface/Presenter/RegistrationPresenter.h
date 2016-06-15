@@ -12,7 +12,7 @@
 
 @interface RegistrationPresenter : NSObject <RegistrationOutput, RegistrationViewInput>
 
-@property (nonatomic, strong) id <RegistrationViewInput> viewController;
-@property (nonatomic, strong) id <RegistrationOutput> interractor;
+@property (nonatomic, strong) id <RegistrationViewOutput> viewController;
+@property (nonatomic, strong) id <RegistrationInput> interractor;
 
 @end

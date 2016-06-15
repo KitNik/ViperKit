@@ -15,7 +15,7 @@
 
 @interface LoginPresenter : NSObject <LoginOutput, LoginViewInput>
 
-@property (nonatomic, strong) id <LoginInput> interactor;
-@property (nonatomic, strong) id <LoginViewOutput> viewContrtoller;
+@property (nonatomic, weak) id <LoginInput> interactor;
+@property (nonatomic, weak) id <LoginViewOutput> viewContrtoller;
 
 @end

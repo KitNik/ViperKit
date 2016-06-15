@@ -18,6 +18,4 @@
 @property (nonatomic, strong) NSString *password;
 @property (nonatomic, strong) NSString *confirmPassword;
 
-+ (instancetype)initWithDataFromRegistrationView:(RegistrationView *)registrationView;
-
 @end

@@ -11,6 +11,6 @@
 
 @interface RegistrationWireframe : NSObject
 
-- (void)presentLoginViewControllerFromNavigationController:(UINavigationController *)navController;
+- (void)presentRegistrationViewControllerFromNavigationController:(UINavigationController *)navController;
 
 @end

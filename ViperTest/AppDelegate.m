@@ -11,6 +11,8 @@
 
 @interface AppDelegate ()
 
+@property (nonatomic, strong) LoginWireframe *loginWireframe;
+
 @end
 
 @implementation AppDelegate
@@ -21,8 +23,8 @@
       
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    LoginWireframe *loginWireframe = [[LoginWireframe alloc] init];
-    [loginWireframe presentLoginViewControllerFromWindow:self.window];
+    self.loginWireframe = [[LoginWireframe alloc] init];
+    [self.loginWireframe presentLoginViewControllerFromWindow:self.window];
     
     return YES;
 }

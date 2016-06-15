@@ -23,6 +23,11 @@
 {
     [super viewDidLoad];
     [self addDismissingKeyboardbyTouch];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     [self hideNavigationBar];
 }
 
@@ -30,9 +35,43 @@
 
 - (IBAction)signUpButtonTapped:(UIButton *)sender
 {
-    RegistrationDomainModel *registrationModel = [RegistrationDomainModel initWithDataFromRegistrationView:self.contentView];
+    if ([self.presenter respondsToSelector:@selector(signUpButtonTappedWithData:)]) {
+        RegistrationDomainModel *registrationModel = [self registrationDomainModelFromRegistrationView:self.contentView];
+        [self.presenter signUpButtonTappedWithData:registrationModel];
+    }
     
+}
+
+- (IBAction)backToLogInButtonTapped:(UIButton *)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - RegistrationViewOutput Delegate
+
+- (void)updateInterfaceWithSuccessSigningUp
+{
+    [self displayAlertWithMessage:@"You are success registered!\n😇"];
+}
+
+- (void)updateInterfaceWithFailureSigningUpAnderrorMessage:(NSString *)errorMessage
+{
+    [self displayAlertWithErrorMessage:errorMessage];
+}
+
+#pragma mark - Help Methods
+
+- (RegistrationDomainModel *)registrationDomainModelFromRegistrationView:(RegistrationView *)registrationView
+{
+    RegistrationDomainModel *model = [[RegistrationDomainModel alloc] init];
     
+    model.firstName         = registrationView.firstNameTextField.text;
+    model.lastname          = registrationView.lastNameTextField.text;
+    model.email             = registrationView.emailTextField.text;
+    model.password          = registrationView.passwordTextField.text;
+    model.confirmPassword   = registrationView.confirmPasswordTextField.text;
+    
+    return model;
 }
 
 @end

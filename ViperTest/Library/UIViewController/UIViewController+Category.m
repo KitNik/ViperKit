@@ -12,8 +12,18 @@
 
 - (void)displayAlertWithErrorMessage:(NSString *)errorMessage
 {
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@""
-                                                                   message:errorMessage
+    [self displayAlertWithOkButtonAndTitle:@"ERROR" andMessage:errorMessage];
+}
+
+- (void)displayAlertWithMessage:(NSString *)message
+{
+    [self displayAlertWithOkButtonAndTitle:@"VIPER" andMessage:message];
+}
+
+- (void)displayAlertWithOkButtonAndTitle:(NSString *)title andMessage:(NSString *)messgae
+{
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:messgae
                                                             preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
@@ -26,6 +36,11 @@
 - (void)hideNavigationBar
 {
     [self.navigationController.navigationBar setHidden:YES];
+}
+
+- (void)displayNavigationBar
+{
+    [self.navigationController.navigationBar setHidden:NO];
 }
 
 - (void)addDismissingKeyboardbyTouch

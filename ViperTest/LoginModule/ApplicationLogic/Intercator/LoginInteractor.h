@@ -11,6 +11,6 @@
 
 @interface LoginInteractor : NSObject <LoginInput>
 
-@property (nonatomic, strong) id <LoginOutput> presenter;
+@property (nonatomic, weak) id <LoginOutput> presenter;
 
 @end

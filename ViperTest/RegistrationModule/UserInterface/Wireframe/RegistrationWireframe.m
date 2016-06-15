@@ -12,17 +12,31 @@
 #import "RegistrationPresenter.h"
 #import "RegistrationInteractor.h"
 
+@interface RegistrationWireframe ()
+
+@property (nonatomic, strong) RegistrationVC *registrationVC;
+@property (nonatomic, strong) RegistrationPresenter *presenter;
+@property (nonatomic, strong) RegistrationInteractor *interactor;
+
+@end
+
 @implementation RegistrationWireframe
 
-- (void)presentLoginViewControllerFromNavigationController:(UINavigationController *)navController
+- (void)presentRegistrationViewControllerFromNavigationController:(UINavigationController *)navController
 {
     UIStoryboard *storyboard = [UIStoryboard authorizationStoryboard];
     
-    RegistrationVC *registrationVC = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([RegistrationVC class])];
-    RegistrationPresenter *presenter = [[RegistrationPresenter alloc] init];
-    RegistrationInteractor *interactor = [[RegistrationInteractor alloc] init];
+    self.registrationVC = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([RegistrationVC class])];
+    self.presenter = [[RegistrationPresenter alloc] init];
+    self.interactor = [[RegistrationInteractor alloc] init];
     
+    self.registrationVC.presenter = self.presenter;
+    self.interactor.presenter = self.presenter;
     
+    self.presenter.viewController = self.registrationVC;
+    self.presenter.interractor = self.interactor;
+    
+    [navController pushViewController:self.registrationVC animated:YES];
 }
 
 @end

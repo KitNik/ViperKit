@@ -16,7 +16,7 @@
 - (void)signUpButtonTappedWithData:(RegistrationDomainModel *)registrationDomainModel
 {
     if ([self.interractor respondsToSelector:@selector(signUpWithData:)]) {
-        self.interractor 
+        [self.interractor signUpWithData:registrationDomainModel];
     }
 }
 
@@ -24,12 +24,16 @@
 
 - (void)signUpSuccess
 {
-    
+    if ([self.viewController respondsToSelector:@selector(updateInterfaceWithSuccessSigningUp)]) {
+        [self.viewController updateInterfaceWithSuccessSigningUp];
+    }
 }
 
 - (void)signUpFailureWithErrorMessage:(NSString *)errorMessage
 {
-    
+    if ([self.viewController respondsToSelector:@selector(updateInterfaceWithFailureSigningUpAnderrorMessage:)]) {
+        [self.viewController updateInterfaceWithFailureSigningUpAnderrorMessage:errorMessage];
+    }
 }
 
 @end

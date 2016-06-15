@@ -8,15 +8,26 @@
 
 #import "RegistrationInteractor.h"
 #import "RegistrationDomainModel.h"
+#import "NSError+Category.h"
 
 @implementation RegistrationInteractor
 
+#pragma mark - RegistrationInput Delegate
+
 - (void)signUpWithData:(RegistrationDomainModel *)registrationDomainModel
 {
-    BOOL isDataValied = self isLoginDataValid:<#(RegistrationDomainModel *)#>
+    BOOL isDataValied = [self isSigningDataValid:registrationDomainModel];
+    BOOL isPasswordСonfirmed = [self isPasswordconfirmedInModel:registrationDomainModel];
     
-    if (self is) {
-        <#statements#>
+    if (isDataValied && isPasswordСonfirmed) {
+        if ([self.presenter respondsToSelector:@selector(signUpSuccess)]) {
+            [self.presenter signUpSuccess];
+        }
+    } else {
+        if ([self.presenter respondsToSelector:@selector(signUpFailureWithErrorMessage:)]) {
+            NSError *error = [NSError generate];
+            [self.presenter signUpFailureWithErrorMessage:error.localizedDescription];
+        }
     }
 }
 
@@ -42,8 +53,9 @@
     return isValid;
 }
 
-- (BOOL)isPasswordValidInModel:(RegistrationDomainModel *)registrationDomainModel
+- (BOOL)isPasswordconfirmedInModel:(RegistrationDomainModel *)registrationDomainModel
 {
+    // some validation logic
     return [registrationDomainModel.password isEqualToString:registrationDomainModel.confirmPassword];
 }
 

@@ -13,6 +13,6 @@
 
 @interface LoginVC : UIViewController <LoginViewOutput>
 
-@property (nonatomic, strong) id <LoginViewInput> presenter;
+@property (nonatomic, weak) id <LoginViewInput> presenter;
 
 @end

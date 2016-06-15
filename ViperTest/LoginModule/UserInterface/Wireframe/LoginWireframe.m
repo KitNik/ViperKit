@@ -12,23 +12,31 @@
 #import "LoginInteractor.h"
 #import "UIStoryboard+Category.h"
 
+@interface LoginWireframe ()
+
+@property (nonatomic, strong) LoginVC *loginVC;
+@property (nonatomic, strong) LoginPresenter *presenter;
+@property (nonatomic, strong) LoginInteractor *interactor;
+
+@end
+
 @implementation LoginWireframe
 
 - (void)presentLoginViewControllerFromNavigationController:(UINavigationController *)navController
 {
     UIStoryboard *storyboard = [UIStoryboard authorizationStoryboard];
     
-    LoginVC *loginVC = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([LoginVC class])];
-    LoginPresenter *presenter = [[LoginPresenter alloc] init];
-    LoginInteractor *interactor = [[LoginInteractor alloc] init];
+    self.loginVC = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([LoginVC class])];
+    self.presenter = [[LoginPresenter alloc] init];
+    self.interactor = [[LoginInteractor alloc] init];
     
-    presenter.viewContrtoller = loginVC;
-    presenter.interactor = interactor;
+    self.presenter.viewContrtoller = self.loginVC;
+    self.presenter.interactor = self.interactor;
     
-    loginVC.presenter = presenter;
-    interactor.presenter = presenter;
+    self.loginVC.presenter = self.presenter;
+    self.interactor.presenter = self.presenter;
     
-    [navController pushViewController:loginVC animated:YES];
+    [navController pushViewController:self.loginVC animated:YES];
 }
 
 - (void)presentLoginViewControllerFromWindow:(UIWindow *)window

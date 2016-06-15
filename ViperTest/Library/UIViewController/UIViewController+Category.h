@@ -10,8 +10,10 @@
 
 @interface UIViewController (Category)
 
+- (void)displayAlertWithMessage:(NSString *)message;
 - (void)displayAlertWithErrorMessage:(NSString *)errorMessage;
 - (void)hideNavigationBar;
+- (void)displayNavigationBar;
 - (void)addDismissingKeyboardbyTouch;
 
 @end
